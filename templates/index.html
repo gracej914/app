@@ -1,0 +1,50 @@
+<html>
+    <body>
+    <h2>Predict Customer Preference of Beer (Rating range 1-5)</h2> 
+    <form method="POST" action="/">
+        ABV:<br>
+        <input type="number" name="beer_abv" value=""
+        <br><br>
+        Taste Rate (1-5):<br>
+        <input type="number" name="review_taste" value=""
+        <br><br>
+        Aroma Rate (1-5):<br>
+        <input type="number" name="review_aroma" value=""
+        <br><br>
+        Appearance Rate (1-5):<br>
+        <input type="number" name="review_appearance" value=""
+        <br><br>
+        Mouthfeel Rate (1-5):<br>
+        <input type="number" name="review_palate" value=""
+        <br><br>
+        Beer Style:<br>
+
+            <select name="beer_style" id="beer_style">
+              <option value="">Select a beer style</option>
+              <option value="26">American IPA</option>
+              <option value="3">American Double / Imperial IPA</option>
+              <option value="8">Russian Imperial Stout</option>
+              <option value="18">American Double / Imperial Stout</option>
+              <option value="1">American Pale Ale (APA)</option>
+              <option value="12">American Porter</option>
+              <option value="15">Belgian Strong Dark Ale</option>
+              <option value="10">American Amber / Red Ale</option>
+              <option value="4">American Strong Ale</option>
+              <option value="69">Belgian Strong Pale Ale</option>
+              <option value="50">Tripel</option>
+              <option value="21 ">Fruit / Vegetable Beer </option>
+              <option value="40">Witbier</option>
+              <option value="39">Saison / Farmhouse Ale </option>
+            </select>     
+
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br>
+    </form> 
+
+    {% if pred %}
+    <p>The Customer Preference of the Beer is {{ pred }}</p>
+    {% endif %}
+    
+    </body>
+</html>
